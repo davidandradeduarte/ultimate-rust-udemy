@@ -5,9 +5,10 @@
 - Pretty much every rust project uses cargo.
 - Cargo projects usually have a simple structure: `src` for the source code, `target` for the compiled binaries, `tests` for the tests and `Cargo.toml` for the project configuration.
 - Variables are unmutable by default. (safety, concurrency, speed)
-- Compile error messages and suggestions are really helpful.
 - `const` variables should be screaming snake case.
-- Variable shadowing is a thing. We can shadow not only variable values but also variable types.
+- It allows for variable shadowing. We can shadow not only values but types too.
+- Rust compiler is one of its biggest strengths. It tries to avoid a lof of runtime issues other languages have. The error messages are also very helpful and intuitive. For every error there's usually a suggestion.
+- Rust doesn't have a GC (garbage collector). Instead it knows when a variable goes out of scope at compile time and inserts the necessary LLVM/assembly instructions to free the memory.
 - The compiler wont let you use variables that are possibily not initialized.
 - Tail expression (return omitted):
   ```rust
@@ -36,3 +37,22 @@
     }
   }
   ```
+- The `.` (dot) operator auto dereferences pointers.
+- Manually dereferencing a pointer:
+  ```rust
+  (*p).method(); // this is optional
+  *s = String::from("hello"); // when (re)assigning/using the pointer value we need to manually dereference it
+  ```
+- References: you can have either exactly one mutable reference or any number of immutable references.
+- A closure has access to variables in the scope where it’s defined (pretty much like in any other language).
+- The closest thing to a class in rust is a `struct`.
+- When initializing a struct you need to specify all fields.
+- `Self` is the type of the current object.
+- `self` is syntax sugar for `self: Self` in function signatures. `&self` is `self: &Self` and `&mut self` is `self: &mut Self`. It can only be used as the first argument in a function signature.
+- There's no struct inheritance in rust.
+- Traits are similar to interfaces in other languages.
+- Traits can inherit from other traits.
+- When implementing a trait you need to implement all the methods of the trait.
+- When implementing a trait you need to implement all parent traits.
+- Traits can have default implementations.
+- There's no fields in traits (at least yet). An alternative is to use getters and setters.
