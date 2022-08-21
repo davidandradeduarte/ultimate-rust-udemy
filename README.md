@@ -1,4 +1,4 @@
-# ultimate-rust-udemy
+# Ultimate Rust Crash Course
 
 Collection of [notes](NOTES.md) and exercises took during the course.
 
