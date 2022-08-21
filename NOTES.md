@@ -24,3 +24,15 @@
 - A character (`char`) is always 4 bytes long (32 bits).
 - Tuples have a limit of 12 elements (or at least if you intend to use their full functionality).
 - Arrays are fixed size and live on the stack by default.
+- `if`'s are expressions (they can return a value):
+  ```rust
+  num = if true { 1 } else { 0 };
+  ```
+- `loop` (infinite loop) can have labels to allow break and continue on nested loops.
+  ```rust
+  'outer:loop {
+    loop {
+      break 'outer;
+    }
+  }
+  ```
