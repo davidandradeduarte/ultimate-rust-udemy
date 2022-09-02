@@ -58,5 +58,5 @@
 - There's no fields in traits (at least yet). An alternative is to use getters and setters.
 - A vector `Vec<T>` is Rust's list(C#)/slice(Go) type. A type agnostic continuously growable array.
 - `HashMap<K, V>` is Rust's dictionary(C#)/map(Go) type. A type agnostic key/value hash table.
-- Option<T> is Rust's nullable type.
-- `Result<T, E>` is used for error handling.
+- `Option<T>` is Rust's nullable type. It has two enum values: `Some(T)` and `None`.
+- `Result<T, E>` is used for error handling. It has two enum values: `Ok(T)` and `Err(E)`.
